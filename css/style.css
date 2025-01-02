@@ -1,0 +1,315 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body.dark-theme {
+    --main-bg:#141A22;
+    --text-color:#fff;
+    --navbar-text-color:#fff;
+    --join-btn-bg-color:#0077E5;
+    --join-btn-text-color:#fff;
+    --join-btn-bg-hover-color:#fff;
+    --join-btn-text-hover-color:#0077E5;
+    --learn-btn-bg-color:#fff;
+    --learn-btn-text-color:#0077E5;
+    --learn-btn-bg-hover-color:#0077E5;
+    --learn-btn-text-hover-color:#fff;
+    --btn-border-color:#0077E5;
+    --author-text-color:#888787;
+}
+
+body.light-theme {
+    --main-bg:#fff;
+    --text-color:#141A22;
+    --navbar-text-color:#fff;
+    --join-btn-bg-color:#0077E5;
+    --join-btn-text-color:#fff;
+    --join-btn-bg-hover-color:#fff;
+    --join-btn-text-hover-color:#0077E5;
+    --learn-btn-bg-color:#fff;
+    --learn-btn-text-color:#0077E5;
+    --learn-btn-bg-hover-color:#0077E5;
+    --learn-btn-text-hover-color:#fff;
+    --btn-border-color:#0077E5;
+    --author-text-color:#888787;
+}
+
+body {
+    font-family: Inter, sans-serif;
+    background-color: var(--main-bg);
+    color: var(--text-color);
+}
+.navbar {
+    display: none;
+    color: var(--text-color);
+    margin: 0 auto;
+    position: relative;
+    right: 20px;
+}
+
+.main-header {
+    display: flex;
+    align-items: center;
+    padding-inline: 2rem;
+    background-color: var(--main-bg);
+}
+.hamburger-menu {
+    position: fixed;
+    top: 2%;
+    right: 10px;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+.main {
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+.logo {
+    max-width: 90px;
+    margin: .5rem;
+}
+.line {
+    width: 40px;
+    height: 2px;
+    background-color: rgb(128, 128, 128);
+    border-radius: 5px;
+    transition: all 0.3s;
+    margin: 5px 0;
+}
+.hamburger-menu.active .line:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+.hamburger-menu.active .line:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-menu.active .line:nth-child(3) {
+    transform: translateY(-14px) rotate(-45deg);
+}
+.mobile-nav {
+    display: none;
+    list-style: none;
+    background-color: #1d2a3ce7;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 100vh;
+    text-align: center;
+    position: fixed;
+}
+
+.mobile-list {
+    margin-top: 50%;
+}
+.mobile-list .nav-link {
+    font-size: 1.5rem;
+    padding: 1rem;
+    display: block;
+    border-bottom: 1px solid #fff;
+    transition: all 0.3s;
+}
+
+.mobile-list .nav-link:hover {
+    background-color: #212b37;
+}
+
+.mobile-nav.active {
+    display: flex;
+    flex-direction: column;
+}
+.nav-link {
+    color: var(--navbar-text-color);
+    text-decoration: none;
+    margin: 0 .7rem;
+    font-size: 1.2rem;
+}
+.no-style-list {
+    list-style: none;
+}
+
+/*navigation end*/
+
+/* main content start */
+.intro {
+    margin-top: 5rem;
+}
+.main-title {
+    font-size: 3rem;
+    max-width: 80%;
+    font-weight: 700;
+    text-align: center;
+    margin: 1rem auto;
+}
+.title-desc {
+    text-align: center;
+    margin: 1rem auto;
+}
+.section:not(:first-child) {
+    margin: 2rem auto;
+}
+.side-title {
+    font-size: 2.3rem;
+    text-align: center;
+}
+.paragraph {
+    text-align: center;
+    margin: 1rem auto;
+    max-width: 80%;
+}
+.author-span {
+    display: block;
+    margin: 1rem auto;
+    color: var(--author-text-color);
+}
+
+.medium-title {
+    text-align: center;
+    max-width: 80%;
+    margin: 1rem auto;
+}
+
+.activities-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1rem auto;
+}
+.margin-top-bottom {
+    margin: 2rem auto;
+}
+
+/* main content end */
+
+/*buttons start*/
+.btn {
+    display: block;
+    margin: 1rem auto;
+    width: 80%;
+    background-color: var(--join-btn-bg-color);
+    border:2px solid var(--btn-border-color);
+    font-family: Roboto, sans-serif;
+    padding: .5rem 2rem;
+    font-size: 1rem;
+    border-radius: .3rem;
+    cursor: pointer;
+    transition: .3s;
+}
+a {
+    text-decoration: none;
+    text-align: center;
+}
+.join-btn-discord  a {
+    text-decoration: none;
+    color: var(--join-btn-text-color);
+    border: 2px solid red;
+    width: 100%;
+
+}
+
+.join-btn-discord  a:visited {
+    text-decoration: none;
+    color: var(--join-btn-text-color);
+
+}
+.join-btn a {
+    text-decoration: none;
+    color: var(--join-btn-text-color);
+}
+.join-btn a:visited {
+    color: var(--join-btn-text-color);
+}
+.join-btn, .join-btn-discord {
+    color: var(--join-btn-text-color);
+}
+.join-btn:hover, .join-btn-discord:hover {
+    background-color: var(--join-btn-bg-hover-color);
+    color: var(--join-btn-text-hover-color);
+}
+.join-btn:focus .join-btn-discord:focus {
+    background-color: var(--join-btn-bg-hover-color);
+    color: var(--join-btn-text-hover-color);
+}
+.learn-btn {
+    background-color: var(--learn-btn-bg-color);
+    color: var(--learn-btn-text-color);
+}
+.learn-btn:hover {
+    background-color: var(--learn-btn-bg-hover-color);
+    color: var(--learn-btn-text-hover-color);
+}
+.learn-btn:focus {
+    background-color: var(--learn-btn-bg-hover-color);
+    color: var(--learn-btn-text-hover-color);
+}
+.theme-toggle-btn {
+    color: var(--join-btn-text-color);
+    width: 20px;
+    height: 24px;
+    border-radius: .5rem;
+    margin: .3rem auto;
+    position: relative;
+    padding: .3 1rem;
+}
+.theme-toggle-btn .circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--join-btn-text-color);
+    position: absolute;
+    top: 0;
+    left: 2px;
+    transition: .3s;
+}
+.theme-toggle-btn .circle.active {
+    left: 42px;
+    transition: .3s;
+}
+/*buttons end*/
+
+
+/*media querioes start*/
+
+@media (min-width: 1200px) {
+    .navbar {
+        display: flex;
+    }
+    .main-header {
+        position: fixed;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .mobile-nav, .hamburger-menu {
+        display: none;
+    }
+    
+    .buttons-div {
+        max-width: 50%;
+        display: flex;
+        margin: 0 auto;
+        gap: .7rem;
+    }
+    .join-btn-discord {
+        margin: 1rem auto;
+        max-width: 50%;
+    }
+    .nav-link {
+        color: var(--text-color);
+    }
+    .navbar {
+        align-items: center;
+    }
+}
+/*media querioes end*/
